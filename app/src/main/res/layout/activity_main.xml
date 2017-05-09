@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo"
+        android:orientation="horizontal">
+
+        <!-- Equipo LOCAL -->
+        <LinearLayout style="@style/CuadriculaEquipos">
+
+            <TextView
+                style="@style/NombreEquipo"
+                android:layout_gravity="center"
+                android:text="@string/equipoLocal" />
+
+            <!-- Marcador Local -->
+            <TextView
+                android:id="@+id/contadorLocal"
+                style="@style/Marcador"
+                android:text="@string/marcador" />
+
+            <!-- Gol Local -->
+            <Button
+                style="@style/BotonMarcador"
+                android:onClick="setGolLocal"
+                android:text="@string/botonGol" />
+
+            <!-- Tarjetas Equipo Local -->
+            <RelativeLayout style="@style/tarjeteros">
+
+                <Button
+                    android:id="@+id/tarjeta_amarillo_local"
+                    style="@style/tarjetas"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/t_amarilla"
+                    android:onClick="setAmarillaLocal" />
+
+                <Button
+                    android:id="@+id/tarjeta_roja_local"
+                    style="@style/tarjetas"
+                    android:layout_below="@id/tarjeta_amarillo_local"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/t_roja"
+                    android:onClick="setRojaLocal" />
+
+                <TextView
+                    android:id="@+id/amarillasLocales"
+                    style="@style/textoTarjetas"
+                    android:layout_toRightOf="@id/tarjeta_amarillo_local"
+                    android:text="@string/marcador"
+                    android:textColor="@color/tarjetaAmarilla" />
+
+                <TextView
+                    android:id="@+id/rojasLocales"
+                    style="@style/textoTarjetas"
+                    android:layout_below="@id/amarillasLocales"
+                    android:layout_toRightOf="@id/tarjeta_roja_local"
+                    android:text="@string/marcador"
+                    android:textColor="@color/tarjetaRoja" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Equipo VISITANTE -->
+        <LinearLayout
+            style="@style/CuadriculaEquipos"
+            android:layout_weight="0.5">
+
+            <TextView
+                style="@style/NombreEquipo"
+                android:text="Equipo Visitante" />
+
+            <!-- Marcador Visitante -->
+            <TextView
+                android:id="@+id/contadorVisitante"
+                style="@style/Marcador"
+                android:text="@string/marcador" />
+
+            <!-- Gol Visitante -->
+            <Button
+                style="@style/BotonMarcador"
+                android:onClick="setgolVisitante"
+                android:text="GOL" />
+
+            <!-- Tarjetas Equipo Visitante -->
+            <RelativeLayout style="@style/tarjeteros">
+
+                <Button
+                    android:id="@+id/tarjeta_amarilla_visitante"
+                    style="@style/tarjetas"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/t_amarilla"
+                    android:onClick="setAmarillaVisitante" />
+
+                <Button
+                    android:id="@+id/tarjeta_roja_visitante"
+                    style="@style/tarjetas"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tarjeta_amarilla_visitante"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/t_roja"
+                    android:onClick="setRojaVisitante" />
+
+                <TextView
+                    android:id="@+id/amarillasVisitantes"
+                    style="@style/textoTarjetas"
+                    android:layout_toLeftOf="@id/tarjeta_amarilla_visitante"
+                    android:text="@string/marcador"
+                    android:textColor="@color/tarjetaAmarilla" />
+
+                <TextView
+                    android:id="@+id/rojasVisitantes"
+                    style="@style/textoTarjetas"
+                    android:layout_below="@id/amarillasVisitantes"
+                    android:layout_toLeftOf="@id/tarjeta_roja_visitante"
+                    android:text="@string/marcador"
+                    android:textColor="@color/tarjetaRoja" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Reseteo de partida -->
+    <Button
+        style="@style/contador"
+        android:layout_alignBottom="@id/container"
+        android:onClick="reseteo"
+        android:text="@string/contador" />
+</RelativeLayout>

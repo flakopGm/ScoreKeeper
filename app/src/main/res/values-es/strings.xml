@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Marcador</string>
+    <string name="contador">Resetear contador</string>
+    <string name="equipoLocal">Equipo Local</string>
+    <string name="equipoVisitante">Equipo Visitante</string>
+    <string name="toast">QUE COMIENCE EL PARTIDO!!!</string>
+</resources>

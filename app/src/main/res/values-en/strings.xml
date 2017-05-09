@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="contador">Reset Counter</string>
+    <string name="equipoLocal">Local team</string>
+    <string name="equipoVisitante">Visiting team</string>
+    <string name="toast">Let the soccer game begin !!!</string>
+</resources>

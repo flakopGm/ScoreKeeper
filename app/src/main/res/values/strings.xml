@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="equipoLocal">Equipo Local</string>
+    <string name="equipoVisitante">Equipo Visitante</string>
+    <string name="botonGol" translatable="false">GOL</string>
+    <string name="marcador">0</string>
+    <string name="contador">Resetear contador</string>
+    <string name="toast">QUE COMIENCE EL PARTIDO!!!</string>
+
+</resources>
